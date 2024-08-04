@@ -7,8 +7,5 @@ jobs:
       - uses: actions/checkout@v4
       - uses: psf/black@stable
         with:
-          python-version: 3.11
-      - run: |
-          black --check --verbose .
-          black --check --verbose ./dir1
-          black --check --verbose ./dir2
+        options: "--check --verbose"
+        src: [".", "./dir1", "./dir2"]
