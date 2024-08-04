@@ -4,12 +4,10 @@ jobs:
   black:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v1
+      - uses: actions/checkout@v4
+      - uses: psf/black@stable
         with:
           python-version: 3.11
-      - run: |
-          python -m pip install --upgrade pip
       - run: |
           black --check --verbose .
           black --check --verbose ./dir1
