@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
 jobs:
   black:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: psf/black@stable
         with:
-        options: "--check --verbose"
-        src: [".", "./dir1", "./dir2"]
+          options: "--check --verbose"
+          src: [".", "./dir1", "./dir2"]
