@@ -21,4 +21,4 @@ jobs:
       
       - name: Run Black check
         run: |
-          black --check --verbose . ./dir1 ./dir2
+          black --check --verbose --line-length 80 . ./dir1 ./dir2
